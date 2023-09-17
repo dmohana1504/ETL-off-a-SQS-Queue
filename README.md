@@ -6,8 +6,7 @@ Welcome to this project! The primary goal here is to craft an ETL pipeline that 
 
 - Python 3.11+
 - PSQL
-- Docker
-- Docker Compose
+- Docker & Docker Compose
 - pip or pip3
 - AWS CLI
 
@@ -68,14 +67,22 @@ Welcome to this project! The primary goal here is to craft an ETL pipeline that 
 
 4. **Running the Code**: Running into issues with the provided scripts? No worries! You can always run `Main.py` inside the `Fetch-Rewards-Take-Home\Main` directory using your favorite editor or terminal.
 
-## Assumptions
+## Decision Points & Strategies
 
-- We're leaning on the expectation that the Localstack image is stocked up with SQS messages.
-- Similarly, the Postgres image is believed to have all the initial configurations.
+- **Reading from Queue**: Messages are fetched from the SQS Queue using `awslocal` commands.
+- **Data Structures**: Lists and dictionaries in Python serve as our primary data structures, ensuring optimal performance and clarity.
+- **Masking PII Data**: SHA-256 hashing aids in masking while retaining the capability to identify duplicate values.
+- **Database Connection**: We use the psycopg2 Python library to establish a connection and write to Postgres.
+- **Runtime Environment**: The entire application is containerized using Docker, making it platform-independent.
+
+## Assumptions
+- The Localstack image is pre-loaded with SQS messages.
+- The Postgres image has all initial configurations set.
+- The reader has a foundational understanding of Docker, PSQL, and AWS operations.
 
 ## Masking Mechanism
 
-Wondering how we're ensuring user privacy? We're relying on SHA-256 hashing to elegantly mask the PII (Personal Identifiable Information). This ensures the original essence is scrambled beyond recognition, making it secure yet usable for analysis.
+We prioritize user privacy by using SHA-256 hashing, which masks PII (Personal Identifiable Information) yet allows for data analysis by identifying duplicates.
 
 ## Deployment Strategy
 
@@ -105,4 +112,8 @@ With data burgeoning, how does this application stand tall?
 
 ## Recovering Original Data
 
-Given that we're using SHA-256 for masking, direct decryption isn't possible. For data recovery, one could consider maintaining a secure mapping or storing original data encrypted in a separate database. Only a handful with special privileges would have the keys to this treasure.
+Given the use of SHA-256 for masking, direct decryption isn't feasible. For data recovery, consider maintaining a secure mapping or storing the original encrypted data separately. Restricted individuals would have exclusive access.
+
+## Contributions & Feedback
+
+I am open to contributions and feedback to refine this solution further. Feel free to raise issues or suggest improvements.
