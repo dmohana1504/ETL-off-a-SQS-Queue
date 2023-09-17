@@ -8,7 +8,7 @@ Welcome to this project! The primary goal here is to craft an ETL pipeline that 
 - PSQL
 - Docker & Docker Compose
 - pip or pip3
-- AWS CLI
+- awscli-local
 
 ## Getting Started
 
