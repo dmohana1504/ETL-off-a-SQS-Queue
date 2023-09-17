@@ -8,3 +8,4 @@ docker-compose up -d
 #Run the Main.py file
 echo "Executing Main.py"
 Python3 Main/Main.py
+echo "Completed"

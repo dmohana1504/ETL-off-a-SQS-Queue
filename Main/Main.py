@@ -2,7 +2,8 @@ from SQS_Operation import read_messages_from_queue
 from DatabaseOperations import create_table
 
 if __name__ == '__main__':
-    # First, create the table
+    # Set up the user_logins table first
     create_table()
-    # Then, read messages from the queue
+
+    # Fetch and process messages from the SQS queue
     read_messages_from_queue()

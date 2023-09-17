@@ -1,8 +1,9 @@
 # Run docker-compose up -d command
+echo "Running docker-compose\n"
 docker-compose up -d
 
-# Wait for a few seconds to make sure containers are up
-Start-Sleep -Seconds 2
-
 # Run the Main.py file using Python
+echo "Executing Main.py"
 python .\Main\Main.py
+echo "Completed"
+Start-Sleep -Seconds 2
