@@ -1,4 +1,2 @@
 psycopg2
-hashlib
 boto3
-json
