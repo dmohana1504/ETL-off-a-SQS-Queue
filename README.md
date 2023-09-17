@@ -9,7 +9,7 @@ Welcome to this project! The primary goal here is to craft an ETL pipeline that 
 - Docker & Docker Compose
 - pip or pip3
 - awscli-local
-- Python Libraries : psycopg2, hashlib, boto3, and json.
+- Python Libraries : psycopg2, and boto3.
    
 ## Getting Started
 
