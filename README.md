@@ -22,14 +22,14 @@ Welcome to this project! The primary goal here is to craft an ETL pipeline that 
    pip install -r modules.txt
    ```     
    
-2. **Setting up**:
+3. **Setting up**:
    - **For Windows users**: Simply right-click on `Run_Me_Windows` and choose 'Run with PowerShell'.
    - **For MacOS users**: Navigate to the repository folder in your terminal and execute:
      ```bash
      ./Run_Me_Mac.sh
      ```
 
-3. **Database Details**: Whether you're on Windows or MacOS, our default PSQL credentials are:
+4. **Database Details**: Whether you're on Windows or MacOS, our default PSQL credentials are:
    ```plaintext
    dbname: postgres
    user: postgres
@@ -40,7 +40,7 @@ Welcome to this project! The primary goal here is to craft an ETL pipeline that 
 
    If you're using different credentials, navigate to `Fetch-Rewards-Take-Home\Main` and adjust the values in the `connect_to_database` function within `DataOperations.py`.
 
-4. **Connecting to the Database**:
+5. **Connecting to the Database**:
    - **On Windows**: Open a PowerShell window and input:
      ```bash
      psql -d postgres -U postgres -p 5432 -h localhost -W
@@ -51,7 +51,7 @@ Welcome to this project! The primary goal here is to craft an ETL pipeline that 
      psql -d postgres -U postgres -p 5432 -h localhost -W
      ```
 
-5. **Viewing the Data**: Once you're in the PSQL interface, simply use the following to view the table:
+6. **Viewing the Data**: Once you're in the PSQL interface, simply use the following to view the table:
    ```sql
    SELECT * FROM user_logins;
    ```
@@ -64,13 +64,13 @@ Welcome to this project! The primary goal here is to craft an ETL pipeline that 
    awslocal sqs receive-message --queue-url http://localhost:4566/000000000000/login-queue
    ```
 
-3. **Docker Hiccups**: Ensure that Docker services are up and running before executing the script. If you have any issues run the commands below to restart docker manually:
+2. **Docker Hiccups**: Ensure that Docker services are up and running before executing the script. If you have any issues run the commands below to restart docker manually:
    ```bash
    docker-compose down
    docker-compose up -d
    ```
 
-4. **Running the Code**: Running into issues with the provided scripts? No worries! You can always run `Main.py` inside the `Fetch-Rewards-Take-Home\Main` directory using your favorite editor or terminal.
+3. **Running the Code**: Running into issues with the provided scripts? No worries! You can always run `Main.py` inside the `Fetch-Rewards-Take-Home\Main` directory using your favorite editor or terminal.
 
 ## Decision Points & Strategies
 
