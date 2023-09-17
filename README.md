@@ -17,7 +17,7 @@ Welcome to this project! The primary goal here is to craft an ETL pipeline that 
    ```bash
    git clone https://github.com/dmohana1504/Fetch-Rewards-Take-Home.git
    ```
-2. **Install Python Libraries**: If you do not have the Python libraries from the requirements then open PowerShell or Terminal and run the command below:
+2. **Install Python Libraries**: If you do not have the Python libraries from the requirements then open PowerShell or Terminal, navigate to the repository folder, and run the command below:
    ```bash
    pip install -r modules.txt
    ```     
