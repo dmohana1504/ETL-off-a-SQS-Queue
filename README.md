@@ -9,14 +9,19 @@ Welcome to this project! The primary goal here is to craft an ETL pipeline that 
 - Docker & Docker Compose
 - pip or pip3
 - awscli-local
-
+- Python Libraries : psycopg2, hashlib, boto3, and json.
+   
 ## Getting Started
 
 1. **Get the Code**: First things first, clone the repository:
    ```bash
    git clone https://github.com/dmohana1504/Fetch-Rewards-Take-Home.git
    ```
-
+2. **Install Python Libraries**: If you do not have the Python libraries from the requirements then open PowerShell or Terminal and run the command below:
+   ```bash
+   pip install -r modules.txt
+   ```     
+   
 2. **Setting up**:
    - **For Windows users**: Simply right-click on `Run_Me_Windows` and choose 'Run with PowerShell'.
    - **For MacOS users**: Navigate to the repository folder in your terminal and execute:
