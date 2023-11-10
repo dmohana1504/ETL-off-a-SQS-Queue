@@ -1,4 +1,4 @@
-# Data Engineering Take Home: ETL off a SQS Queue
+# ETL off a SQS Queue
 
 Welcome to this project! The primary goal here is to craft an ETL pipeline that seamlessly fetches JSON data from an AWS SQS Queue, subtly masks the fields `device_id` and `ip` to ensure user privacy, and then diligently stores the transformed information into a PostgreSQL database.
 
