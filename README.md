@@ -15,7 +15,7 @@ Welcome to this project! The primary goal here is to craft an ETL pipeline that 
 
 1. **Get the Code**: First things first, clone the repository:
    ```bash
-   git clone https://github.com/dmohana1504/Fetch-Rewards-Take-Home.git
+   git clone https://github.com/dmohana1504/ETL-off-a-SQS-Queue
    ```
 2. **Install Python Libraries**: If you do not have the Python libraries from the requirements then open PowerShell or Terminal, navigate to the repository folder, and run the command below:
    ```bash
